@@ -1,0 +1,31 @@
+name: 'Greeting demo by OWNER'
+description: 'Greets someone and returns the greeting as an output'
+author: 'OWNER'
+
+branding:
+  icon: 'message-circle'
+  color: 'purple'
+
+inputs:
+  who:
+    description: 'Who to greet'
+    required: true
+    default: 'World'
+
+outputs:
+  greeting:
+    description: 'The full greeting'
+    value: ${{ steps.greet.outputs.greeting }}
+
+runs:
+  using: 'composite'
+  steps:
+    - name: Build the greeting
+      id: greet
+      shell: bash
+      env:
+        WHO: ${{ inputs.who }}
+      run: |
+        greeting="Hello, $WHO!"
+        echo "$greeting"
+        echo "greeting=$greeting" >> "$GITHUB_OUTPUT"
