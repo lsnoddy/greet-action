@@ -1,6 +1,6 @@
-name: 'Greeting demo by OWNER'
+name: 'Greeting demo by lsnoddy'
 description: 'Greets someone and returns the greeting as an output'
-author: 'OWNER'
+author: 'lsnoddy'
 
 branding:
   icon: 'message-circle'
