@@ -31,4 +31,4 @@ steps:
     run: echo "$GREETING"
 ```
 
-Works on Linux, macOS and Windows runners. No secrets or extra permissions needed.
+Works on Linux, macOS and Windows runners. No secrets or extra permissions needed
